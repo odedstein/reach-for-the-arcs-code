@@ -1,0 +1,9 @@
+Feel free to download and run this code to reproduce our paper results, but do not use this in your own software - please use the implementation in Gpytoolbox (gpytoolbox.org), which has a permissive open-source license.
+
+This repository contains BSD2-Licensed code from nanoflann (github.com/jlblancoc/nanoflann).
+This repository contains MIT-Licensed code from PoissonRecon (github.com/mkazhdan/PoissonRecon).
+This repository contains MPL2/Apache2/MIT-Licensed code from libigl and its dependencies (https://github.com/libigl/libigl).
+This repository contains MIT-Licensed code from https://github.com/eliemichel/WebGPU-Cpp and https://github.com/eliemichel/LearnWebGPU-Code by Elie Michel
+This repository contains a code snippet from https://stackoverflow.com/a/76726123
+
+
