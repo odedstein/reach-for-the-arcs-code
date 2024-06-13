@@ -35,8 +35,8 @@ np.random.seed(rng_seed)
 random.seed(rng_seed)
 
 # methods
-methods = [ "mc", "ndc", "rfts", "rfta" ]
-# methods = [ "mc", "rfts", "rfta" ]
+# methods = [ "mc", "ndc", "rfts", "rfta" ]
+methods = [ "mc", "rfts", "rfta" ]
 # methods = [ "ndc" ] #separately because this only works on my laptop
 
 # metrics
