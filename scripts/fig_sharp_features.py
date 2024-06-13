@@ -1,3 +1,4 @@
+# This script generates the data for Figure 21 (right)
 from context import *
 import numpy as np
 import gpytoolbox as gpy

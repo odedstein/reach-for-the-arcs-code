@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 22
 from context import *
 import numpy as np
 import gpytoolbox as gpy
@@ -88,7 +89,7 @@ if args.run:
     V_mc, F_mc = gpy.marching_cubes(S, U, n+1, n+1, n+1)
 
     # ndc
-    V_ndc, F_ndc = utility.ndc(V_gt, F_gt, n)
+    # V_ndc, F_ndc = utility.ndc(V_gt, F_gt, n)
 
     # Reach for the Arcs
     V, F, P, N = rfta.reach_for_the_arcs(U, S, verbose = False, parallel = True, return_point_cloud=True, debug_Vgt=V_gt, debug_Fgt=F_gt, fine_tune_iters=50, max_points_per_sphere=50)
@@ -101,7 +102,7 @@ if args.run:
     gpy.write_mesh( write_path + "ours.obj", V @ np.linalg.inv(R), F)
     gpy.write_mesh( write_path + "ground_truth.obj", V_gt @ np.linalg.inv(R), F_gt)
     gpy.write_mesh( write_path + "marching_cubes.obj", V_mc @ np.linalg.inv(R), F_mc)
-    gpy.write_mesh( write_path + "ndc.obj", V_ndc @ np.linalg.inv(R), F_ndc)
+    # gpy.write_mesh( write_path + "ndc.obj", V_ndc @ np.linalg.inv(R), F_ndc)
 
 if args.metrics:
     num_points = 100000

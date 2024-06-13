@@ -1,3 +1,4 @@
+# This script replicates the results from the large scale quantitative experiment in the paper, referenced throughout
 from context import *
 import numpy as np
 import gpytoolbox as gpy
@@ -46,6 +47,7 @@ metrics = [ "chf", "hd", "sdf" ]
 # some usual test meshes
 # path_to_all_meshes = "data/many-shapes-experiment/"
 # thingi10k
+# This is the path to the meshes in the thingi10k dataset as released here: https://wildmeshing.github.io/tetwild/
 path_to_all_meshes = "../../shapes/thingi10k-tetwilded/"
 # Get all mesh files
 all_mesh_files = os.listdir(path_to_all_meshes)

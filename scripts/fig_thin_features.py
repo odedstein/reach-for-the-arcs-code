@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 21 (left)
 from context import *
 import numpy as np
 import gpytoolbox as gpy

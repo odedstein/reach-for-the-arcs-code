@@ -1,3 +1,4 @@
+# This script generates the data for Figure 11
 from context import *
 
 rng_seed = 34523

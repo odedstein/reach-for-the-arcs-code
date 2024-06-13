@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 4
 from context import *
 import numpy as np
 import gpytoolbox as gpy
@@ -68,7 +69,9 @@ V_gt = V_gt @ R
 # Create and abstract SDF function that is the only connection to the shape
 sdf = lambda x: gpy.signed_distance(x, V_gt, F_gt)[0]
 
-ns = [ 10, 20, 50, 100, 150 ]
+ns = [ 10, 20, 50 ]
+# if you have a better computer
+# ns = [ 10, 20, 50, 100, 150 ]
     
 for i, n in enumerate(ns):
 
@@ -83,20 +86,20 @@ for i, n in enumerate(ns):
     V_mc, F_mc = gpy.marching_cubes(S, U, n+1, n+1, n+1)
 
     # ndc
-    V_ndc, F_ndc = utility.ndc(V_gt, F_gt, n)
+    # V_ndc, F_ndc = utility.ndc(V_gt, F_gt, n)
 
     # Reach for the Arcs
-    # V, F, P, N = rfta.reach_for_the_arcs(U, S, verbose = False, parallel = True, return_point_cloud=True, debug_Vgt=V_gt, debug_Fgt=F_gt, fine_tune_iters=50, max_points_per_sphere=50)
+    V, F, P, N = rfta.reach_for_the_arcs(U, S, verbose = False, parallel = True, return_point_cloud=True, debug_Vgt=V_gt, debug_Fgt=F_gt, fine_tune_iters=50, max_points_per_sphere=50)
 
     write_path = results_path + mesh +  f"/{n}/"
     if not os.path.exists(write_path):
         os.makedirs(write_path)
 
     # Write output
-    # gpy.write_mesh( write_path + "ours.obj", V @ np.linalg.inv(R), F)
+    gpy.write_mesh( write_path + "ours.obj", V @ np.linalg.inv(R), F)
     gpy.write_mesh( write_path + "ground_truth.obj", V_gt @ np.linalg.inv(R), F_gt)
     gpy.write_mesh( write_path + "marching_cubes.obj", V_mc @ np.linalg.inv(R), F_mc)
-    gpy.write_mesh( write_path + "ndc.obj", V_ndc @ np.linalg.inv(R), F_ndc)
+    # gpy.write_mesh( write_path + "ndc.obj", V_ndc @ np.linalg.inv(R), F_ndc)
     
     # ps.init()
     # ps.register_surface_mesh("ours", V, F)

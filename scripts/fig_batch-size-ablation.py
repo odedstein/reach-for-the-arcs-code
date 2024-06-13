@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 12
 from context import *
 
 parser = argparse.ArgumentParser(description='Large quantitative experiment.')
@@ -26,7 +27,9 @@ gpy.write_mesh(results_path + "ground-truth.obj", V_gt, F_gt)
 sdf = lambda x: gpy.signed_distance(x, V_gt, F_gt)[0]
 
 # Set up a grid
-ns = [ 10, 15, 20, 30, 40, 55 ]
+# only run all these if your computer can handle it (since it benchmarks the non-batching option of our code, which is very slow at large resolutions)
+# ns = [ 10, 15, 20, 30, 40, 55 ]
+ns = [ 10, 15, 20, 30]
 batch_sizes = [ 0, 1000, 10000 ]
 
 if args.run:

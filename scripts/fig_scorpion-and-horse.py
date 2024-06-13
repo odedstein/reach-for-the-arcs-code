@@ -1,3 +1,4 @@
+# This script generates the data for Figure 18
 from context import *
 import numpy as np
 import gpytoolbox as gpy
@@ -6,6 +7,9 @@ import polyscope as ps
 rng_seed = 34523
 
 results_path = "results/scorpion-and-horse/"
+# make dir
+if not os.path.exists(results_path):
+    os.makedirs(results_path)
 
 meshes = [ "horse", "scorpion" ]
 
@@ -13,6 +17,9 @@ for mesh in meshes:
 
     # Load ground truth mesh
     filename = "data/" + mesh + ".obj"
+    # make dir
+    if not os.path.exists(results_path + mesh):
+        os.makedirs(results_path + mesh)
     V_gt,F_gt = gpy.read_mesh(filename)
     V_gt = gpy.normalize_points(V_gt)
 

@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 16
 from context import *
 import numpy as np
 import gpytoolbox as gpy
@@ -93,7 +94,7 @@ for i, n in enumerate(ns):
     V_rfts, F_rfts = gpy.reach_for_the_spheres(U, None, V0, F0, S=S, verbose=False)
 
     # Reach for the Arcs
-    V_rfta, F_rfta = rfta.reach_for_the_arcs(U, S, verbose=False, parallel=True,
+    V_rfta, F_rfta = rfta.reach_for_the_arcs(U, S, verbose=True, parallel=True,
         fine_tune_iters=100, max_points_per_sphere=16)
 
     write_path = results_path + mesh +  f"/{n}/"

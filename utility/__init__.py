@@ -1,5 +1,5 @@
 from .chamfer import chamfer
-from .ndc import ndc
+# from .ndc import ndc
 from .boolean_hulls import boolean_hulls
 from .read_mesh import read_mesh
 from .write_mesh import write_mesh

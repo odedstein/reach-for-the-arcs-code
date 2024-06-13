@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 15
 from context import *
 
 rng_seed = 34523
@@ -33,7 +34,7 @@ hd_mc = gpy.approximate_hausdorff_distance(V_gt, F_gt, V_mc, F_mc)
 
 # Reach for the Arcs
 # screening weights powers of 2 from 2^{-4} to 2^{8}
-screening_weights = np.power(2.0, np.arange(-4, 14, 1))
+screening_weights = np.power(2.0, np.arange(-4, 10, 1))
 chfs = np.zeros(screening_weights.shape)
 hds = np.zeros(screening_weights.shape)
 for i, screening_weight in enumerate(screening_weights):

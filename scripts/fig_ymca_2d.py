@@ -1,3 +1,4 @@
+# This script replicates the 2D results from Figure 6
 from context import *
 import numpy as np
 import gpytoolbox as gpy

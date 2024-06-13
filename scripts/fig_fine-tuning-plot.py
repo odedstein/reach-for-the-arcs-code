@@ -1,3 +1,4 @@
+# This script replicates the results from Figure 13
 from context import *
 
 rng_seed = 34523

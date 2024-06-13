@@ -1,3 +1,5 @@
+# This script replicates the results from Figure 23
+
 from context import *
 
 rng_seed = 34523
@@ -86,8 +88,8 @@ hd_mc = gpy.approximate_hausdorff_distance(V_gt, F_gt, V_mc, F_mc)
 
 # Reach for the Arcs
 # screening weights powers of 2 from 2^{-4} to 2^{8}
-# noise_amplitudes = [0.0, 0.001, 0.01, 0.02, 0.05, 0.1]
-noise_amplitudes = []
+noise_amplitudes = [0.0, 0.001, 0.01, 0.02, 0.05 ]
+# noise_amplitudes = []
 for i, amp in enumerate(noise_amplitudes):
     # log
     print("noise amplitude = {}".format(amp))
@@ -110,11 +112,5 @@ for i, amp in enumerate(noise_amplitudes):
 
     # V_ndc, F_ndc = utility.ndc(V_gt, F_gt, n)
 
-# bar chart of chamfer errors
-        
-chmf_errors = [0.075, 0.035, 0.038, 0.04, 0.057, 0.15]
-plt.bar(range(len(chmf_errors)), chmf_errors)
-plt.xlim([-1, len(chmf_errors)])
-plt.ylim([0, 0.2])
-plt.savefig(results_path + "chamfer_errors.eps")
-plt.close()
+# bar chart of chamfer errors   
+# chmf_errors = [0.075, 0.035, 0.038, 0.04, 0.057, 0.15] # from the print
