@@ -29,6 +29,7 @@ Then you can run the code.
 
 If you install any python packages whatsoever, add them (with the correct version) to the requirements.txt first.
 Our main code functionality is contained in `src/`, while the scripts used for all our experiments go in `scripts/`. Run the files starting with `fig_` in that folder to reproduce results from the paper (see the comment in the first line of each one for the correspondence between script and figure number).
+Each figure scripts populates a folder inside `results/` with the meshes and images used in the paper figures (a zipped version of each directory is already included in `results/` for your convenience).
 
 ## Issues
 
