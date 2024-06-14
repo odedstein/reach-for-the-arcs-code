@@ -5,12 +5,9 @@ Reconstructing Surfaces from SDFs via Tangent Points](https://odedstein.com/proj
 
 
 
-[!CAUTION]
+> [!CAUTION]
 
-**If you are looking for an implementation of _Reach For the Arcs_, DO NOT USE THIS CODE! Use the reach\_for\_the\_arcs function in [Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/) instead.**
-This repository is merely the implementation that can be used to reproduce some of the figures in the original article, made public here for replicability purposes.
-The version of `reach_for_the_arcs` in [Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/) will be updated with bugfixes and enhancements, which the code here will be frozen in time forever.
-For the vast majority of use cases, the implementation you want is most likely **NOT** this repository, but [the one in Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/).
+> **If you are looking for an implementation of _Reach For the Arcs_, DO NOT USE THIS CODE! Use the reach\_for\_the\_arcs function in [Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/) instead.** This repository is merely the implementation that can be used to reproduce some of the figures in the original article, made public here for replicability purposes. The version of `reach_for_the_arcs` in [Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/) will be updated with bugfixes and enhancements, which the code here will be frozen in time forever. **For the vast majority of use cases, the implementation you want is most likely *NOT* this repository, but [the one in Gpytoolbox](https://gpytoolbox.org/latest/reach_for_the_arcs/).**
 
 The python version we used to run this code is 3.9.
 Please create your own conda environment with the correct python version, and install all the packages from requirements.txt:
