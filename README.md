@@ -33,5 +33,9 @@ Each figure scripts populates a folder inside `results/` with the meshes and ima
 
 ## Issues
 
-Please submit an issue in this repository or [email us](mailto:sgsellan@cs.toronto.edu) if you encounter any issues when running this code.
+Please [email us](mailto:sgsellan@cs.toronto.edu) if you encounter any issues when running this code.
+
+## Thanks
+
+Thanks to Abhishek Madan for testing this repository.
 
