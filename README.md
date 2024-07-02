@@ -11,6 +11,8 @@ by Silvia Sellán, Yinying Ren, Christopher Batty and Oded Stein.
 
 ## Instructions
 
+Please make sure to clone this repository with all its submodules.
+
 The python version we used to run this code is 3.9.
 Please create your own conda environment with the correct python version, and install all the packages from requirements.txt:
 ```
@@ -29,6 +31,7 @@ Then you can run the code.
 
 If you install any python packages whatsoever, add them (with the correct version) to the requirements.txt first.
 Our main code functionality is contained in `src/`, while the scripts used for all our experiments go in `scripts/`. Run the files starting with `fig_` in that folder to reproduce results from the paper (see the comment in the first line of each one for the correspondence between script and figure number).
+Please run the scripts while you are in the root directory of the repository!
 Each figure scripts populates a folder inside `results/` with the meshes and images used in the paper figures (a zipped version of each directory is already included in `results/` for your convenience).
 
 ## Issues
