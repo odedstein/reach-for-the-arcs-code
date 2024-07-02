@@ -40,5 +40,5 @@ Please [email us](mailto:sgsellan@cs.toronto.edu) if you encounter any issues wh
 
 ## Thanks
 
-Thanks to Abhishek Madan for testing this repository.
+Thanks to Abhishek Madan and João Teixeira for testing this repository.
 
