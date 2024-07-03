@@ -3,6 +3,7 @@
 #include "outside_points_from_rejection_sampling.h"
 #include "sAABB.h"
 #include <iostream>
+#include <chrono>
 
 template<int dim>
 void outside_points_from_rejection_sampling(
