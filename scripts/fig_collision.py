@@ -123,7 +123,8 @@ if args.metrics:
     # turn ts_gt into binary "hit / no hit" (it is inf if no hit)
     ts_gt_bool = np.isfinite(ts_gt)
 
-    meshes = ["marching_cubes", "ndc", "ours"]
+    # meshes = ["marching_cubes", "ndc", "ours"]
+    meshes = ["marching_cubes", "ours"]
     for mesh in meshes:
         # load
         filename = results_path + f"/{mesh}.obj"
