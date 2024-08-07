@@ -43,6 +43,9 @@ results/many-shapes-experiment/**/*.obj
 results/**/*.obj
 results/**/*.ply
 results/**/*.npy
+results/**/*.eps
+results/**/*.pdf
+results/**/*.png
 scripts/silvias-debug-script.py
 paper/
 
