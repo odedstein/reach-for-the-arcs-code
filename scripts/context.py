@@ -17,16 +17,16 @@ if os_name == "Darwin":
 
     # Check if the macOS version is less than 14
     if os_version and os_version < "14":
-        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build-studio')))
+        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../build-studio')))
     else:
-        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build')))
+        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../build')))
 elif os_name == "Windows":
     # For Windows systems
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build/Debug')))
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build/Release')))
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../build/Debug')))
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../build/Release')))
 else:
     # For other systems
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build')))
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../build')))
 import rfta_bindings
 
 import matplotlib.pyplot as plt
