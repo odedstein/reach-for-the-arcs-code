@@ -1,5 +1,7 @@
 #include "locally_make_feasible.h"
 
+#include <numeric>
+
 #include <random>
 #include <iostream>
 #include <algorithm>

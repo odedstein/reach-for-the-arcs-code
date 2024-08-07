@@ -14,8 +14,12 @@ if os_name == "Darwin":
         sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build-studio')))
     else:
         sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build')))
+elif os_name == "Windows":
+    # For Windows systems
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build/Debug')))
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build/Release')))
 else:
-    # For non-macOS systems
+    # For other systems
     sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../build')))
 from rfta_bindings import _point_cloud_to_mesh_cpp_impl
 
